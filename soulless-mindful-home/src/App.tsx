@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { NavLink } from './components/NavLink'
+import { Home } from './components/Home'
 import './App.css'
 
 export const App = (): ReactElement => {
@@ -27,7 +28,9 @@ export const App = (): ReactElement => {
         <main className="App-content">
           <Switch>
             <Route path="/projects"></Route>
-            <Route path="/"></Route>
+            <Route path="/">
+              <Home />
+            </Route>
           </Switch>
         </main>
         <footer className="App-footer">
