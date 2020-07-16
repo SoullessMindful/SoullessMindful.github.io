@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -49,6 +50,6 @@ export const NavLink = ({
       {content}
     </a>
   ) : (
-    content
+    <Link to={path}>{content}</Link>
   )
 }
