@@ -1,5 +1,6 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement, useState, useEffect } from 'react'
 import styled from 'styled-components'
+import { List } from './List'
 
 const Container = styled.section`
   display: flex;
@@ -14,40 +15,24 @@ const ContentBlock = styled.article`
   margin: 1rem 0;
   background-color: white;
   border-radius: 10px;
+  box-shadow: -5px -5px 5px hsl(0, 0%, 80%), 5px 5px 0px hsl(0, 0%, 60%);
 `
 
 export const Home = (): ReactElement => {
+  const [technologies, setTechnologies] = useState([])
+
+  useEffect(() => {
+    fetch('/technologies.json')
+      .then(async (res) => await res.json())
+      .then((data) => setTechnologies(data))
+      .catch(() => setTechnologies([]))
+  }, [])
+
   return (
     <Container>
       <h2>Hi</h2>
       <ContentBlock>
-        <ul style={{ display: 'inline-block', textAlign: 'left' }}>
-          <li>TypeScript</li>
-          <li>
-            JavaScript
-            <ul>
-              <li>React</li>
-              <li>Express</li>
-              <li>Webpack</li>
-              <li>ESLint & Prettier</li>
-            </ul>
-          </li>
-          <li>HTML5</li>
-          <li>
-            CSS3
-            <ul>
-              <li>SASS</li>
-              <li>BootStrap</li>
-            </ul>
-          </li>
-          <li>
-            Python
-            <ul>
-              <li>Tensorflow</li>
-              <li>Keras</li>
-            </ul>
-          </li>
-        </ul>
+        <List elements={technologies} />
       </ContentBlock>
       <ContentBlock>Hehe</ContentBlock>
     </Container>

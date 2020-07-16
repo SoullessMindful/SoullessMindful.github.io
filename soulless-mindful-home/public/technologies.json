@@ -1,0 +1,28 @@
+[
+  { "label": "Typescript" },
+  {
+    "label": "Javascript",
+    "sublist": [
+      { "label": "React" },
+      { "label": "Express" },
+      { "label": "Jest & Fast-Check" },
+      { "label": "Webpack" },
+      { "label": "ESLint & Prettier" }
+    ]
+  },
+  { "label": "HTML5" },
+  {
+    "label": "CSS3",
+    "sublist": [
+      { "label": "SASS" },
+      { "label": "Bootstrap" }
+    ]
+  },
+  {
+    "label": "Python",
+    "sublist": [
+      { "label": "Tensorflow" },
+      { "label": "Keras" }
+    ]
+  }
+]
