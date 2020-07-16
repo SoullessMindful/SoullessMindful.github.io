@@ -9,7 +9,7 @@ export const App = (): ReactElement => {
         <h1>soulless MindfuL</h1>
       </header>
       <nav className="App-navigation">
-        <NavLink label="Skills" path="" />
+        <NavLink label="Home" path="" />
         <NavLink label="Projects" path="my-skills" />
         <NavLink
           label="Github"
@@ -23,8 +23,7 @@ export const App = (): ReactElement => {
         />
       </nav>
       <main className="App-content"></main>
-      <div className="App-footer App-footer-shadow">A</div>
-      <footer className="App-footer App-footer-bottom">
+      <footer className="App-footer">
         Soulless Mindful - Sławomir Kusiński - 2020
       </footer>
     </div>
