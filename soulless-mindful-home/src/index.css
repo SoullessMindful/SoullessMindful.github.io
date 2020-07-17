@@ -29,9 +29,20 @@ code {
     monospace;
 }
 
+@keyframes slide-from-left {
+  from {
+    left: -25vw;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
 @font-face {
   font-family: 'Cinzel Decorative';
-  src: url('./fonts/CinzelDecorative-Bold.otf') format("opentype");
+  src: url('./fonts/CinzelDecorative-Bold.otf') format('opentype');
   font-weight: bold;
 }
 

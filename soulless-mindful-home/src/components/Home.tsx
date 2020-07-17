@@ -30,7 +30,7 @@ export const Home: FunctionComponent = () => {
       <ContentBlock label="technologies">
         <List elements={technologies} />
       </ContentBlock>
-      <ContentBlock>Hehe</ContentBlock>
+      <ContentBlock label="som som">Hehe</ContentBlock>
     </Container>
   )
 }
