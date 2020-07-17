@@ -1,24 +1,20 @@
-import React, { ReactElement, useState, useEffect } from 'react'
+import React, { useState, useEffect, FunctionComponent } from 'react'
 import styled from 'styled-components'
 import { List } from './List'
+import { ContentBlock } from './ContentBlock'
 
 const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 2rem;
+
+  h2 {
+    color: white;
+  }
 `
 
-const ContentBlock = styled.article`
-  width: 95%;
-  padding: 2rem;
-  margin: 1rem 0;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: -5px -5px 5px hsl(0, 0%, 80%), 5px 5px 0px hsl(0, 0%, 60%);
-`
-
-export const Home = (): ReactElement => {
+export const Home: FunctionComponent = () => {
   const [technologies, setTechnologies] = useState([])
 
   useEffect(() => {
@@ -31,7 +27,7 @@ export const Home = (): ReactElement => {
   return (
     <Container>
       <h2>Hi</h2>
-      <ContentBlock>
+      <ContentBlock label="technologies">
         <List elements={technologies} />
       </ContentBlock>
       <ContentBlock>Hehe</ContentBlock>

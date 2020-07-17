@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
 
 const StyledList = styled.ul`
@@ -17,7 +17,7 @@ interface ListProps {
   elements: ListElement[]
 }
 
-export const List = ({ elements }: ListProps): ReactElement => (
+export const List: FunctionComponent<ListProps> = ({ elements }) => (
   <div>
     <StyledList>
       {elements.map((element: ListElement) => (

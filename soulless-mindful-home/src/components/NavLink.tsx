@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import React, { FunctionComponent } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -33,11 +33,11 @@ interface NavLinkProps {
   outside?: boolean
 }
 
-export const NavLink = ({
+export const NavLink: FunctionComponent<NavLinkProps> = ({
   label,
   path,
   outside = false,
-}: NavLinkProps): ReactElement => {
+}) => {
   const content = (
     <Container>
       <LeftBlock />
