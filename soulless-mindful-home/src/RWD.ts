@@ -1,0 +1,5 @@
+export const XS = '@media only screen and (max-width: 576px)'
+export const S = '@media only screen and (min-width: 576px)'
+export const M = '@media only screen and (min-width: 768px)'
+export const L = '@media only screen and (min-width: 992px)'
+export const XL = '@media only screen and (min-width: 1200px)'
