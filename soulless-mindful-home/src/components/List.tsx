@@ -18,16 +18,16 @@ interface ListProps {
 }
 
 export const List: FunctionComponent<ListProps> = ({ elements }) => (
-  <div>
-    <StyledList>
-      {elements.map((element: ListElement) => (
-        <li>
-          {element.label}
-          {element.sublist !== undefined && element.sublist.length > 0 ? (
+  <StyledList>
+    {elements.map((element: ListElement) => (
+      <li>
+        {element.label}
+        {element.sublist !== undefined && element.sublist.length > 0 ? (
+          <div>
             <List elements={element.sublist} />
-          ) : undefined}
-        </li>
-      ))}
-    </StyledList>
-  </div>
+          </div>
+        ) : undefined}
+      </li>
+    ))}
+  </StyledList>
 )
