@@ -5,12 +5,14 @@ import { ContentBlock } from './ContentBlock'
 
 const Container = styled.section`
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   font-size: 2rem;
 
   h2 {
     color: white;
+    width: 100%;
   }
 `
 
