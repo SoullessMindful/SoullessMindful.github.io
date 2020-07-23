@@ -6,6 +6,7 @@ import { ContentBlock } from './ContentBlock'
 const PATH_TECHNOLOGIES = '/home/technologies.json'
 const PATH_SOFT_SKILLS = '/home/softskills.json'
 const PATH_LANGUAGES = '/home/languages.json'
+const PATH_INTERESTS = '/home/interests.json'
 
 const Container = styled.section`
   display: flex;
@@ -24,6 +25,7 @@ export const Home: FunctionComponent = () => {
   const [technologies, setTechnologies] = useState([])
   const [softSkills, setSoftSkills] = useState([])
   const [languages, setLanguages] = useState([])
+  const [interests, setInterests] = useState([])
 
   useEffect(() => {
     fetch(PATH_TECHNOLOGIES)
@@ -38,6 +40,10 @@ export const Home: FunctionComponent = () => {
       .then(async (res) => await res.json())
       .then((data) => setLanguages(data))
       .catch(() => setLanguages([]))
+    fetch(PATH_INTERESTS)
+      .then(async (res) => await res.json())
+      .then((data) => setInterests(data))
+      .catch(() => setInterests([]))
   }, [])
 
   return (
@@ -51,6 +57,9 @@ export const Home: FunctionComponent = () => {
       </ContentBlock>
       <ContentBlock label="languages">
         <List elements={languages} />
+      </ContentBlock>
+      <ContentBlock label="interests">
+        <List elements={interests} />
       </ContentBlock>
     </Container>
   )

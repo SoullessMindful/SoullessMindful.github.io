@@ -1,0 +1,18 @@
+[
+  {
+    "label": "Educational Web Apps"
+  },
+  {
+    "label": "Machine Learning",
+    "sublist": [
+      { "label": "Natural Language Processing" },
+      { "label": "ML supported e-learning" }
+    ]
+  },
+  {
+    "label": "Parsers and Compilers"
+  },
+  {
+    "label": "Formal Reasoning Validation"
+  }
+]
