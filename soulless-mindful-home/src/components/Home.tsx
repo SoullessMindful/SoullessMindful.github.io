@@ -3,10 +3,11 @@ import styled from 'styled-components'
 import { List } from './List'
 import { ContentBlock } from './ContentBlock'
 
-const PATH_TECHNOLOGIES = '/home/technologies.json'
-const PATH_SOFT_SKILLS = '/home/softskills.json'
-const PATH_LANGUAGES = '/home/languages.json'
-const PATH_INTERESTS = '/home/interests.json'
+const PATH_HOME_DATA = '/home-data.json'
+// const PATH_TECHNOLOGIES = '/home/technologies.json'
+// const PATH_SOFT_SKILLS = '/home/softskills.json'
+// const PATH_LANGUAGES = '/home/languages.json'
+// const PATH_INTERESTS = '/home/interests.json'
 
 const Container = styled.section`
   display: flex;
@@ -22,35 +23,25 @@ const Container = styled.section`
 `
 
 export const Home: FunctionComponent = () => {
-  const [technologies, setTechnologies] = useState([])
-  const [softSkills, setSoftSkills] = useState([])
-  const [languages, setLanguages] = useState([])
-  const [interests, setInterests] = useState([])
+  const [homeData, setHomeData] = useState<any>({})
 
   useEffect(() => {
-    fetch(PATH_TECHNOLOGIES)
+    fetch(PATH_HOME_DATA)
       .then(async (res) => await res.json())
-      .then((data) => setTechnologies(data))
-      .catch(() => setTechnologies([]))
-    fetch(PATH_SOFT_SKILLS)
-      .then(async (res) => await res.json())
-      .then((data) => setSoftSkills(data))
-      .catch(() => setSoftSkills([]))
-    fetch(PATH_LANGUAGES)
-      .then(async (res) => await res.json())
-      .then((data) => setLanguages(data))
-      .catch(() => setLanguages([]))
-    fetch(PATH_INTERESTS)
-      .then(async (res) => await res.json())
-      .then((data) => setInterests(data))
-      .catch(() => setInterests([]))
+      .then((data) => setHomeData(data))
+      .catch(() => setHomeData({}))
   }, [])
+
+  const techSkills = homeData.techSkills ?? []
+  const softSkills = homeData.softSkills ?? []
+  const languages = homeData.languages ?? []
+  const interests = homeData.interests ?? []
 
   return (
     <Container>
       <h2>Hi</h2>
-      <ContentBlock label="technologies">
-        <List elements={technologies} />
+      <ContentBlock label="tech skills">
+        <List elements={techSkills} />
       </ContentBlock>
       <ContentBlock label="soft skills">
         <List elements={softSkills} />
