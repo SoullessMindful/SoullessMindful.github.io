@@ -3,6 +3,10 @@ import styled from 'styled-components'
 import { List } from './List'
 import { ContentBlock } from './ContentBlock'
 
+const PATH_TECHNOLOGIES = '/home/technologies.json'
+const PATH_SOFT_SKILLS = '/home/softskills.json'
+const PATH_LANGUAGES = '/home/languages.json'
+
 const Container = styled.section`
   display: flex;
   flex-direction: row;
@@ -19,16 +23,21 @@ const Container = styled.section`
 export const Home: FunctionComponent = () => {
   const [technologies, setTechnologies] = useState([])
   const [softSkills, setSoftSkills] = useState([])
+  const [languages, setLanguages] = useState([])
 
   useEffect(() => {
-    fetch('/technologies.json')
+    fetch(PATH_TECHNOLOGIES)
       .then(async (res) => await res.json())
       .then((data) => setTechnologies(data))
       .catch(() => setTechnologies([]))
-    fetch('/softskills.json')
+    fetch(PATH_SOFT_SKILLS)
       .then(async (res) => await res.json())
       .then((data) => setSoftSkills(data))
       .catch(() => setSoftSkills([]))
+    fetch(PATH_LANGUAGES)
+      .then(async (res) => await res.json())
+      .then((data) => setLanguages(data))
+      .catch(() => setLanguages([]))
   }, [])
 
   return (
@@ -39,6 +48,9 @@ export const Home: FunctionComponent = () => {
       </ContentBlock>
       <ContentBlock label="soft skills">
         <List elements={softSkills} />
+      </ContentBlock>
+      <ContentBlock label="languages">
+        <List elements={languages} />
       </ContentBlock>
     </Container>
   )

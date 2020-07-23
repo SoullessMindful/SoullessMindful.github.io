@@ -31,5 +31,6 @@
   {
     "label": "Docker",
     "sublist": [{ "label": "Docker Compose" }]
-  }
+  },
+  { "label": "Figma" }
 ]
