@@ -2,6 +2,7 @@ import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
 
 const StyledList = styled.ul`
+  padding-left: 7rem;
   text-align: left;
   display: inline-block;
   list-style: '() => ';

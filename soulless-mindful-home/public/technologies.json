@@ -24,5 +24,12 @@
       { "label": "Tensorflow" },
       { "label": "Keras" }
     ]
+  },
+  { "label": "MongoDB" },
+  { "label": "SQL" },
+  { "label": "Linux" },
+  {
+    "label": "Docker",
+    "sublist": [{ "label": "Docker Compose" }]
   }
 ]

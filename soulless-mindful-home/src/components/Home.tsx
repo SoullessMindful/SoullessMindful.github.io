@@ -18,12 +18,17 @@ const Container = styled.section`
 
 export const Home: FunctionComponent = () => {
   const [technologies, setTechnologies] = useState([])
+  const [softSkills, setSoftSkills] = useState([])
 
   useEffect(() => {
     fetch('/technologies.json')
       .then(async (res) => await res.json())
       .then((data) => setTechnologies(data))
       .catch(() => setTechnologies([]))
+    fetch('/softskills.json')
+      .then(async (res) => await res.json())
+      .then((data) => setSoftSkills(data))
+      .catch(() => setSoftSkills([]))
   }, [])
 
   return (
@@ -31,6 +36,9 @@ export const Home: FunctionComponent = () => {
       <h2>Hi</h2>
       <ContentBlock label="technologies">
         <List elements={technologies} />
+      </ContentBlock>
+      <ContentBlock label="soft skills">
+        <List elements={softSkills} />
       </ContentBlock>
       <ContentBlock label="som som">Hehe</ContentBlock>
     </Container>

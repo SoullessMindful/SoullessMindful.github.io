@@ -13,7 +13,7 @@ const StyledContentBlock = styled.article<{ isLabel: boolean }>`
   box-shadow: -5px -5px 5px hsl(0, 0%, 80%), 5px 5px 0px hsl(0, 0%, 60%);
 
   ${RWD.XL} {
-    width: 45%;
+    width: calc(0.95 * ${RWD.XL_SIZE}px);
   }
 `
 
