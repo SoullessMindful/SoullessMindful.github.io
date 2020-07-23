@@ -40,7 +40,6 @@ export const Home: FunctionComponent = () => {
       <ContentBlock label="soft skills">
         <List elements={softSkills} />
       </ContentBlock>
-      <ContentBlock label="som som">Hehe</ContentBlock>
     </Container>
   )
 }
