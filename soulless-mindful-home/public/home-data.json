@@ -1,0 +1,68 @@
+{
+  "technologies": [
+    { "label": "Typescript" },
+    {
+      "label": "Javascript",
+      "sublist": [
+        { "label": "React" },
+        { "label": "Express" },
+        { "label": "Jest & Fast-Check" },
+        { "label": "Webpack" },
+        { "label": "ESLint & Prettier" }
+      ]
+    },
+    { "label": "HTML5" },
+    {
+      "label": "CSS3",
+      "sublist": [{ "label": "SASS" }, { "label": "Bootstrap" }]
+    },
+    {
+      "label": "Python",
+      "sublist": [{ "label": "Tensorflow" }, { "label": "Keras" }]
+    },
+    { "label": "MongoDB" },
+    { "label": "SQL" },
+    { "label": "Linux" },
+    {
+      "label": "Docker",
+      "sublist": [{ "label": "Docker Compose" }]
+    },
+    { "label": "Figma" }
+  ],
+  "softSkills": [
+    {
+      "label": "Teaching complex concepts"
+    },
+    {
+      "label": "Assessing knowledge and skills of other people"
+    },
+    {
+      "label": "Vast experience in public speaking"
+    }
+  ],
+  "languages": [
+    { "label": "Polish (Native)" },
+    { "label": "English (C1)" },
+    { "label": "Chinese (HSK1)" },
+    { "label": "French (A1)" },
+    { "label": "Esperanto (A1)" }
+  ],
+  "interests": [
+    {
+      "label": "Educational Web Apps"
+    },
+    {
+      "label": "Machine Learning",
+      "sublist": [
+        { "label": "Natural Language Processing" },
+        { "label": "ML supported e-learning" }
+      ]
+    },
+    {
+      "label": "Parsers and Compilers"
+    },
+    {
+      "label": "Formal Reasoning Validation"
+    }
+  ]
+}
