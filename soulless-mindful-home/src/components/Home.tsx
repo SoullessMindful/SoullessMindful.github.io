@@ -1,26 +1,9 @@
 import React, { useState, useEffect, FunctionComponent } from 'react'
-import styled from 'styled-components'
 import { List } from './List'
 import { ContentBlock } from './ContentBlock'
+import { StyledContainer } from './StyledContainer'
 
 const PATH_HOME_DATA = '/home-data.json'
-// const PATH_TECHNOLOGIES = '/home/technologies.json'
-// const PATH_SOFT_SKILLS = '/home/softskills.json'
-// const PATH_LANGUAGES = '/home/languages.json'
-// const PATH_INTERESTS = '/home/interests.json'
-
-const Container = styled.section`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  font-size: 2rem;
-
-  h2 {
-    color: white;
-    width: 100%;
-  }
-`
 
 export const Home: FunctionComponent = () => {
   const [homeData, setHomeData] = useState<any>({})
@@ -38,7 +21,7 @@ export const Home: FunctionComponent = () => {
   const interests = homeData.interests ?? []
 
   return (
-    <Container>
+    <StyledContainer>
       <h2>Hi</h2>
       <ContentBlock label="tech skills">
         <List elements={techSkills} />
@@ -52,6 +35,6 @@ export const Home: FunctionComponent = () => {
       <ContentBlock label="interests">
         <List elements={interests} />
       </ContentBlock>
-    </Container>
+    </StyledContainer>
   )
 }
