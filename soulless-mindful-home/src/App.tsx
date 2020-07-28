@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { NavLink } from './components/NavLink'
 import { Home } from './components/Home'
 import './App.css'
+import { Projects } from './components/Projects'
 
 export const App: FunctionComponent = () => (
   <Router>
@@ -26,7 +27,9 @@ export const App: FunctionComponent = () => (
       </nav>
       <main className="App-content">
         <Switch>
-          <Route path="/projects"></Route>
+          <Route path="/projects">
+            <Projects />
+          </Route>
           <Route path="/">
             <Home />
           </Route>

@@ -31,7 +31,7 @@
 }
 
 .App-content {
-  background-image: linear-gradient(to bottom right, hsl(150, 100%, 40%), hsl(90, 100%, 40%));
+  background-image: linear-gradient(to bottom right, hsl(150, 100%, 40%), hsl(90, 100%, 50%));
   width: 100%;
   flex: auto;
 }

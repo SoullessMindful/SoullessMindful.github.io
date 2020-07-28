@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import * as RWD from '../RWD'
 
 export const StyledContainer = styled.section`
   display: flex;
@@ -10,5 +11,10 @@ export const StyledContainer = styled.section`
   h2 {
     color: white;
     width: 100%;
+  }
+
+  ${RWD.XL} {
+    display: inline-flex;
+    width: ${RWD.XL_SIZE}px;
   }
 `
