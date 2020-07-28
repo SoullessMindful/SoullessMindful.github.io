@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Container = styled.div`
+  transition: background-color 0.3s, color 0.3s;
   height: 1.5em;
   color: white;
   cursor: pointer;
