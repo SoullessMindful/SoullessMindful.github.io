@@ -18,16 +18,26 @@ const StyledProjectBlock = styled.article`
   }
 `
 
+const HashLine = styled.p`
+  font-size: 2.4rem;
+`
+
 const HashTag = styled.div`
+  vertical-align: middle;
+  transition: font-size 0.3s;
   display: inline-block;
   font-weight: bold;
   font-size: 1rem;
-  padding: 0.2rem 0.2rem;
+  padding: 0.2rem;
   margin-right: 0.3rem;
   background-color: hsl(0, 0%, 85%);
   &::before {
     content: '# ';
     color: hsl(270, 100%, 50%);
+  }
+
+  &:hover {
+    font-size: 1.5rem;
   }
 `
 
@@ -45,10 +55,10 @@ export const Project: FunctionComponent<ProjectProps> = ({
   <StyledProjectBlock>
     <h3>{name}</h3>
     <p>{description}</p>
-    <p>
+    <HashLine>
       {tags.map((tag) => (
         <HashTag>{tag}</HashTag>
       ))}
-    </p>
+    </HashLine>
   </StyledProjectBlock>
 )
