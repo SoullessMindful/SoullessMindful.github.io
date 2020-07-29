@@ -17,7 +17,7 @@ const Container = styled.div`
 const LeftBlock = styled.div`
   display: inline-block;
   background-color: hsl(270, 100%, 50%);
-  height: 1.5em;
+  height: 100%;
   width: 0.5em;
   vertical-align: middle;
 `
