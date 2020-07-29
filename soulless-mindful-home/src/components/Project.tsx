@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
 import * as RWD from './../RWD'
+import { linkSync } from 'fs'
 
 const StyledProjectBlock = styled.article`
   position: relative;
@@ -43,16 +44,31 @@ const HashTag = styled.div`
   }
 `
 
+const ProjectLink = styled.a`
+  background-color: hsl(270, 100%, 50%);
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border-radius: 1rem;
+  text-decoration: none;
+`
+
 interface ProjectProps {
   name: string
   description: string
-  tags: string[]
+  tags?: string[]
+  links?: Array<{
+    label: string
+    href: string
+  }>
 }
 
 export const Project: FunctionComponent<ProjectProps> = ({
   name,
   description,
-  tags,
+  tags = [],
+  links = [],
 }) => (
   <StyledProjectBlock>
     <h3>{name}</h3>
@@ -62,5 +78,12 @@ export const Project: FunctionComponent<ProjectProps> = ({
         <HashTag>{tag}</HashTag>
       ))}
     </HashLine>
+    <p>
+      {links.map(({ label, href }) => (
+        <ProjectLink href={href} target="blank">
+          {label}
+        </ProjectLink>
+      ))}
+    </p>
   </StyledProjectBlock>
 )

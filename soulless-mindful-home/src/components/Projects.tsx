@@ -10,6 +10,16 @@ export const Projects: FunctionComponent = () => {
         name="ParseRiver"
         description="A monadic parser library, allowing to implement complex parsers using human readable code"
         tags={['Typescript', 'No Dependencies']}
+        links={[
+          {
+            label: 'Repo',
+            href: 'https://github.com/SoullessMindful/parseriver',
+          },
+          {
+            label: 'NPM',
+            href: 'https://www.npmjs.com/package/parseriver',
+          }
+        ]}
       />
       <Project
         name="Esperanto Parser"
