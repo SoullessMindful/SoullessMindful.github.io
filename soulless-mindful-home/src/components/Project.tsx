@@ -36,8 +36,10 @@ const HashTag = styled.div`
     color: hsl(270, 100%, 50%);
   }
 
-  &:hover {
-    font-size: 1.5rem;
+  ${RWD.L} {
+    &:hover {
+      font-size: 1.3rem;
+    }
   }
 `
 
