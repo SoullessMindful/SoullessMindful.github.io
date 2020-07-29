@@ -16,6 +16,10 @@ const StyledProjectBlock = styled.article`
   ${RWD.XL} {
     width: calc(0.475 * ${RWD.XL_SIZE}px);
   }
+
+  ${RWD.XS} {
+    width: 95%;
+  }
 `
 
 const HashLine = styled.p`
