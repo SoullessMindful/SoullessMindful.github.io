@@ -1,0 +1,43 @@
+[
+  {
+    "name": "ParseRiver",
+    "description": "A monadic parser library, allowing to implement complex parsers using human readable code",
+    "tags": ["Typescript", "No Dependencies"],
+    "links": [
+      {
+        "label": "Repo",
+        "href": "https://github.com/SoullessMindful/parseriver"
+      },
+      {
+        "label": "NPM",
+        "href": "https://www.npmjs.com/package/parseriver"
+      }
+    ]
+  },
+  {
+    "name": "Esperanto Parser",
+    "description": "A grammar analyzer, spellchecker and integrated editor for a constructed language - Esperanto",
+    "tags": ["Typescript", "Webpack", "Sass", "ParseRiver"],
+    "links": [
+      {
+        "label": "Repo",
+        "href": "https://github.com/SoullessMindful/esperanto-parser"
+      },
+      {
+        "label": "GH Page",
+        "href": "https://soullessmindful.github.io/esperanto-parser"
+      }
+    ]
+  },
+  {
+    "name": "Home Page",
+    "description": "The very page you are watching right now",
+    "tags": ["Typescript", "React", "Styled Components"],
+    "links": [
+      {
+        "label": "Repo",
+        "href": "https://github.com/SoullessMindful/SoullessMindful.github.io"
+      }
+    ]
+  }
+]
