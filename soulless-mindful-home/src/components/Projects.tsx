@@ -18,7 +18,7 @@ export const Projects: FunctionComponent = () => {
           {
             label: 'NPM',
             href: 'https://www.npmjs.com/package/parseriver',
-          }
+          },
         ]}
       />
       <Project

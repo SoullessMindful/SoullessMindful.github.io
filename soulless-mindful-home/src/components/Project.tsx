@@ -1,7 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
 import * as RWD from './../RWD'
-import { linkSync } from 'fs'
 
 const StyledProjectBlock = styled.article`
   position: relative;
