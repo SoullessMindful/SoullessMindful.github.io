@@ -48,6 +48,7 @@ const HashTag = styled.div`
 `
 
 const ProjectLink = styled.a`
+  transition: background-color 0.3s;
   background-color: hsl(270, 100%, 50%);
   color: white;
   font-weight: bold;
@@ -55,6 +56,10 @@ const ProjectLink = styled.a`
   margin-right: 0.5rem;
   border-radius: 1.5rem;
   text-decoration: none;
+
+  &:hover {
+    background-color: hsl(300, 100%, 50%);
+  }
 `
 
 interface ProjectProps {
