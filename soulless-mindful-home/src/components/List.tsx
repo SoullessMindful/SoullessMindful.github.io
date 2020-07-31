@@ -2,11 +2,16 @@ import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
 
 const StyledList = styled.ul`
-  padding-left: 7rem;
+  padding-left: 2.5rem;
   text-align: left;
   display: inline-block;
-  list-style: '() => ';
+  list-style: none;
   font-family: 'Fira Code';
+
+  li::before {
+    content: '() => ';
+    color: hsl(270, 100%, 40%);
+  }
 `
 
 interface ListElement {
