@@ -1,5 +1,5 @@
 import React, { useState, useEffect, FunctionComponent } from 'react'
-import { List } from './List'
+import { MainList } from './List'
 import { ContentBlock } from './ContentBlock'
 import { StyledContainer } from './StyledContainer'
 
@@ -24,16 +24,16 @@ export const Home: FunctionComponent = () => {
     <StyledContainer>
       <h2>Hi</h2>
       <ContentBlock label="tech skills">
-        <List elements={techSkills} />
+        <MainList elements={techSkills} />
       </ContentBlock>
       <ContentBlock label="soft skills">
-        <List elements={softSkills} />
+        <MainList elements={softSkills} />
       </ContentBlock>
       <ContentBlock label="languages">
-        <List elements={languages} />
+        <MainList elements={languages} />
       </ContentBlock>
       <ContentBlock label="interests">
-        <List elements={interests} />
+        <MainList elements={interests} />
       </ContentBlock>
     </StyledContainer>
   )

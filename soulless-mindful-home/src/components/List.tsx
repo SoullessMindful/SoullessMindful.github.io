@@ -2,6 +2,7 @@ import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
 
 const StyledList = styled.ul`
+  position: relative;
   padding-left: 2.5rem;
   text-align: left;
   display: inline-block;
@@ -9,9 +10,16 @@ const StyledList = styled.ul`
   font-family: 'Fira Code';
 
   li::before {
+    left: -5rem;
+    position: absolute;
     content: '() => ';
     color: hsl(270, 100%, 40%);
   }
+`
+
+const StyledListContainer = styled.div`
+  display: inline-block;
+  padding-left: 5rem;
 `
 
 interface ListElement {
@@ -36,4 +44,8 @@ export const List: FunctionComponent<ListProps> = ({ elements }) => (
       </li>
     ))}
   </StyledList>
+)
+
+export const MainList: FunctionComponent<ListProps> = (props) => (
+  <StyledListContainer>{List(props)}</StyledListContainer>
 )
