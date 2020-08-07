@@ -8,7 +8,8 @@
         { "label": "Express" },
         { "label": "Jest & Fast-Check" },
         { "label": "Webpack" },
-        { "label": "ESLint & Prettier" }
+        { "label": "ESLint & Prettier" },
+        { "label": "Tensorflow.js" }
       ]
     },
     { "label": "HTML5" },
