@@ -1,6 +1,11 @@
 import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
 
+const StyledWorkElement = styled.div`
+  text-align: left;
+  font-size: 1.5rem;
+`
+
 interface WorkElementProps {
   title: string
   place: string
@@ -16,10 +21,9 @@ export const WorkElement: FunctionComponent<WorkElementProps> = ({
   to,
   duties,
 }) => (
-  <div>
-    <p>
-      {title} at {place}
-    </p>
+  <StyledWorkElement>
+    <p>{title}</p>
+    <p>at {place}</p>
     <p>
       {from} - {to}
     </p>
@@ -28,5 +32,5 @@ export const WorkElement: FunctionComponent<WorkElementProps> = ({
         <li>{duty}</li>
       ))}
     </ul>
-  </div>
+  </StyledWorkElement>
 )

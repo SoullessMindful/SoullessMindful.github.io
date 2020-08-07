@@ -20,6 +20,7 @@ export const Home: FunctionComponent = () => {
   const softSkills = homeData.softSkills ?? []
   const languages = homeData.languages ?? []
   const interests = homeData.interests ?? []
+  const workExperience = homeData.workExperience ?? []
 
   return (
     <StyledContainer>
@@ -34,17 +35,15 @@ export const Home: FunctionComponent = () => {
         <MainList elements={languages} />
       </ContentBlock>
       <ContentBlock label="work experience">
-        <WorkElement
-          title="Research and Teaching Assistant"
-          place="Silesian University of Technology"
-          from="October 2018"
-          to="present"
-          duties={[
-            'Teaching mathematics to the engineering students',
-            'Research in pure mathematics',
-            'Supervising Student Mathematical Interest Group',
-          ]}
-        />
+        {workExperience.map(({ title, place, from, to, duties }: any) => (
+          <WorkElement
+            title={title}
+            place={place}
+            from={from}
+            to={to}
+            duties={duties}
+          />
+        ))}
       </ContentBlock>
       <ContentBlock label="interests">
         <MainList elements={interests} />

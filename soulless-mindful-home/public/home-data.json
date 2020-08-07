@@ -65,5 +65,18 @@
     {
       "label": "Formal Reasoning Validation"
     }
+  ],
+  "workExperience": [
+    {
+      "title": "Research and Teaching Assistant",
+      "place": "Silesian University of Technology",
+      "from": "October 2018",
+      "to": "present",
+      "duties": [
+        "Teaching mathematics to the engineering students",
+        "Research in pure mathematics",
+        "Supervising Student Mathematical Interest Group"
+      ]
+    }
   ]
 }
