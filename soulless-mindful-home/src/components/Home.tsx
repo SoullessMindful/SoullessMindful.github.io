@@ -2,6 +2,7 @@ import React, { useState, useEffect, FunctionComponent } from 'react'
 import { MainList } from './List'
 import { ContentBlock } from './ContentBlock'
 import { StyledContainer } from './StyledContainer'
+import { WorkElement } from './WorkElement'
 
 const PATH_HOME_DATA = '/home-data.json'
 
@@ -31,6 +32,19 @@ export const Home: FunctionComponent = () => {
       </ContentBlock>
       <ContentBlock label="languages">
         <MainList elements={languages} />
+      </ContentBlock>
+      <ContentBlock label="work experience">
+        <WorkElement
+          title="Research and Teaching Assistant"
+          place="Silesian University of Technology"
+          from="October 2018"
+          to="present"
+          duties={[
+            'Teaching mathematics to the engineering students',
+            'Research in pure mathematics',
+            'Supervising Student Mathematical Interest Group',
+          ]}
+        />
       </ContentBlock>
       <ContentBlock label="interests">
         <MainList elements={interests} />
