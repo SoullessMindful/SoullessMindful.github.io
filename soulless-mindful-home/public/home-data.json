@@ -78,5 +78,27 @@
         "Supervising Student Mathematical Interest Group"
       ]
     }
+  ],
+  "education": [
+    {
+      "title": "MSc",
+      "field": "Mathematics",
+      "place": "Silesian University of Technology",
+      "from": "2016",
+      "to": "2018",
+      "specialization": "Theoretical Mathematics",
+      "thesis": "Differentiation of Noncommutative Algebras",
+      "grade": "A (with distinction)"
+    },
+    {
+      "title": "BSc",
+      "field": "Mathematics",
+      "place": "Silesian University of Technology",
+      "from": "2013",
+      "to": "2016",
+      "specialization": "Applied Mathematics",
+      "thesis": "Special Cases of Hadamard Spaces - Hilbert Disc",
+      "grade": "A (with distinction)"
+    }
   ]
 }

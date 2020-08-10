@@ -3,6 +3,7 @@ import { MainList } from './List'
 import { ContentBlock } from './ContentBlock'
 import { StyledContainer } from './StyledContainer'
 import { WorkElement } from './WorkElement'
+import { EducationElement } from './EducationElement'
 
 const PATH_HOME_DATA = '/home-data.json'
 
@@ -21,6 +22,7 @@ export const Home: FunctionComponent = () => {
   const languages = homeData.languages ?? []
   const interests = homeData.interests ?? []
   const workExperience = homeData.workExperience ?? []
+  const education = homeData.education ?? []
 
   return (
     <StyledContainer>
@@ -44,6 +46,31 @@ export const Home: FunctionComponent = () => {
             duties={duties}
           />
         ))}
+      </ContentBlock>
+      <ContentBlock label="education">
+        {education.map(
+          ({
+            title,
+            field,
+            place,
+            from,
+            to,
+            specialization,
+            thesis,
+            grade,
+          }: any) => (
+            <EducationElement
+              title={title}
+              field={field}
+              place={place}
+              from={from}
+              to={to}
+              specialization={specialization}
+              thesis={thesis}
+              grade={grade}
+            />
+          )
+        )}
       </ContentBlock>
       <ContentBlock label="interests">
         <MainList elements={interests} />
