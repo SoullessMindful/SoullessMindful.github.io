@@ -26,7 +26,11 @@ export const Home: FunctionComponent = () => {
 
   return (
     <StyledContainer>
-      <h2>Hi</h2>
+      <h2>
+        Hi
+        <br />I am a Software Developer, Mathematician and Machine Learning
+        Enthusiast
+      </h2>
       <ContentBlock label="tech skills">
         <MainList elements={techSkills} />
       </ContentBlock>

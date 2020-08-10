@@ -16,7 +16,7 @@ export const Projects: FunctionComponent = () => {
 
   return (
     <StyledContainer>
-      <h2>These are the projects I have undertaken</h2>
+      <h2>These are the projects I am working on</h2>
       {projectsData.map(({ name, description, tags, links }: any) => (
         <Project
           name={name}
